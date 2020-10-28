@@ -1,5 +1,7 @@
 import reader
+import writedb
 
 file = 'categorias.csv'
 
-read.read(file)
+cat = reader.read(file)
+writedb.write(cat)
