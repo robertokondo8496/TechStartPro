@@ -8,5 +8,6 @@ def read(file):
         archive = csv.reader(csvfile, delimiter=',')
         next(archive)
         for column in archive:
-            categories.append(column)
+            aux = {"Category": str(column[0])}
+            categories.append(aux)
     return categories
