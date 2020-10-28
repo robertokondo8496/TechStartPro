@@ -14,3 +14,4 @@ def create():
     data = [ { "Name": name, "Description": description, "Value": value, "Categories": categories } ]
 
     writedb.write(data, 'products')
+    print('This product was successfully inserted!')
