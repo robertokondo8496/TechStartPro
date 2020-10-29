@@ -1,8 +1,8 @@
 # this module is responsible for showing data into database
+import pymongo
 
 def show(collection, filter = {}):
     """This function is responsible for showing data into database"""
-    import pymongo
     # creates a connection with database
     myclient = pymongo.MongoClient("mongodb://localhost:27017/")
     db = myclient["techstart"]

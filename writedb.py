@@ -1,7 +1,7 @@
 # this module is responsible for inserting data into database
+import pymongo
 
 def write(data, database):
-    import pymongo
     # creates a connection with database
     myclient = pymongo.MongoClient("mongodb://localhost:27017/")
 
