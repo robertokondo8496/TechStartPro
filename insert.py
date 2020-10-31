@@ -7,6 +7,8 @@ def create():
     description = input("Description: ")
     value = input("Value: ")
     numcat = input("How many categories are you going to insert: ")
+    if(numcat == ""):
+        numcat = 1
     categories = []
     for i in range(int(numcat)):
         aux = input("Categories: ")
