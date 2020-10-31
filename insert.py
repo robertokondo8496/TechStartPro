@@ -2,6 +2,7 @@
 import writedb
 
 def create():
+
     name = input("Product: ")
     description = input("Description: ")
     value = input("Value: ")
@@ -11,7 +12,5 @@ def create():
         aux = input("Categories: ")
         categories.append(aux)
 
-    data = [ { "Name": name, "Description": description, "Value": value, "Categories": categories } ]
-
-    writedb.write(data, 'products')
-    print('This product was successfully inserted!')
+    product = [name, description, value, categories]
+    return product
