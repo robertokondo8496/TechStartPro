@@ -23,7 +23,7 @@ class Product:
         for key, value in data.items():
             if(value != "" and value != [""]):
                 filter.update({key: value})
-                print({key: value})
+                # print({key: value})
         result = show.show('products', filter)
         return result
     
@@ -33,7 +33,7 @@ class Product:
         for key, value in data.items():
             if(value != "" and value != [""]):
                 newdata.update({key: value})
-                print({key: value})        
+                # print({key: value})        
         update.update('products', filter, newdata)
 
     def deleteProduct(self):
@@ -42,6 +42,6 @@ class Product:
         for key, value in data.items():
             if(value != "" and value != [""]):
                 filter.update({key: value})
-                print({key: value})     
+                # print({key: value})     
         # print(filter)
         drop.delete('products', filter)
