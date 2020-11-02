@@ -1,100 +1,52 @@
+# TechStartPro
 
-# Trabalho no olist
-Olist é uma empresa que oferece uma plataforma de integração para vendedores e marketplaces, permitindo-lhes vender seus produtos em vários canais.
+## Project Description
 
-A equipe de desenvolvimento Olist consiste em desenvolvedores que amam o que fazem. Nossos processos de desenvolvimento ágil e nossa busca pelas melhores práticas de desenvolvimento proporcionam um ótimo ambiente para profissionais que gostam de criar softwares de qualidade em boa companhia.
+This is a program that implements an product registrator. Basically, it does an interface between user, who inserts some data about the products and the database, which stores data about those products.
 
-Estamos sempre à procura de bons programadores que adorem melhorar seu trabalho. 
+## Requirements
 
-Este repositório contém um problema usado para avaliar as habilidades do candidato. É importante notar que resolver satisfatoriamente o problema é apenas uma parte do que será avaliado. Também consideramos outras disciplinas de programação como documentação, teste, cronograma de commit, design e melhores práticas de codificação.
+You must have installed on your PC the following items:
 
+- Python 3.9.0
+- MongoDB 4.4.1
 
-# Dicas:
+## Installation
 
-* Leia atentamente a especificação para entender todos os requisitos do problema e do artefato antes de começar, se você não entender algo, diga-nos;
-* Verifique as recomendações e o material de referência no final desta especificação;
-* Apreciamos a simplicidade, portanto, crie uma boa configuração de projeto que nos ajudará na sua avaliação;
-* Por favor, faça testes ... nós apreciamos testes <3 ... testes tornam o mundo melhor.
+### Database
 
-# Como participar
-* Faça um fork deste repositório no Github. Se você não pode criar um fork público deste projeto, faça um repositório privado e adicione permissão de leitura para o usuário abaixo:
-  + mgranemann
-* Siga as instruções do README.md (este arquivo);
-* Candidate-se ao cargo na nossa página de carreiras com o link para o fork no Github.
-  + caso ja tenha realizado a candidatura na pagina de carreiras sem o envio do desafio, responda ao e-mail que lhe foi enviado pela equipe do seleção com o link do seu repositório.
+Start the MongoDB server.
 
+### Program
 
+In the directory of the project, type on console "python3 program.py".
+First time running the program is necessary to import the data from "categorias.csv". Please choose the option in the main menu.
 
-# Especificação
-Você deve implementar um aplicativo para armazenar dados de produtos e categorias.
+## Testing
 
-1. Receba um CSV com as categorias e importe para o banco de dados
+Before running those tests, please make sure that you are running the MongoDB server.
 
-  Dado um arquivo CSV com muitas categorias, você precisa construir um comando para importar os dados para o banco de dados. O arquivo CSV terá o seguinte formato:
+### testread.py
 
-> nome
-> * Móveis
-> * Decoração
-> * Celular 
-> * Informática
-> * Brinquedos
+For testing the module that reads the csv reader, type on console:
 
-Cada registro de categoria no banco de dados deve ter os seguintes campos:
-* id (autogerado)
-* nome
+...
+python3 testread.py
+...
 
-Você precisa armazenar os dados das categorias para complementar os dados do produto que serão armazenados posteriormente (consulte o item # 2).
+### testshow.py
 
+For testing the module that goes tho the database and searches for some data using specified filters by user, type on console:
 
-2. CRUD (criar, ler, atualizar e excluir) de produtos:
+...
+python3 testshow.py
+...
 
-Você precisa implementar estas ações:
-* Criar um produto
-* Ler os dados do produto
-* Atualizar os dados do produto
-* Excluir os dados do produto
+### About the working environment used
 
-Cada registro de produto possui os campos:
-* id (autogerado)
-* nome
-* descrição
-* valor
-* categorias (um produto pode estar em mais de uma categoria)
+To develop this application, some resources were used:
 
-Para recuperar um produto, podemos filtrar por 4 campos (ou uma composição desses quatro):
-* nome
-* descrição
-* valor
-* categorias
-Deve ser possível navegar pelos dados de todos os produtos sem nenhum filtro.
-
-Para criar um produto, será necessário informar os dados abaixo:
-* "nome": // Nome do produto;
-* “descrição”: // Descrição do produto
-* “valor”:// Valor do produto
-* “categorias”:// Lista de ids de categorias
-
-
-# Requisitos do projeto:
-1. Pode ser feita em qualquer linguagem de programação que suporte o paradigma de orientação a objetos
-2. Utilizar padrões de projeto
-3. Boas práticas de desenvolvimento de software
-4. Utilizar paradigma de orientação a objetos
-5. Utilizar GitHub
-6. Camada visual pode ser console, desktop ou web
-7. Variáveis, código e strings devem estar todos em inglês.
-8. Escreva a documentação do projeto contendo:
-
->  * Descrição;
->  * Instruções de instalação (configuração) e teste;
->  * Breve descrição do ambiente de trabalho utilizado para executar este projeto (Computador / sistema operacional, editor de texto / IDE, bibliotecas, etc).
->  * Variáveis, código e strings devem estar todos em inglês.
-  
-# Recomendações
-  * Escreva testes! Por favor, faça testes ... nós apreciamos testes <3 ... testes tornam o mundo melhor;
-  * Use boas práticas de programação;
-  * Use as melhores práticas do git, com mensagens claras;
-  * Esteja ciente ao modelar o banco de dados;
-
-# Divirta-se!
+- OS Windows 10 Home
+- IDE Microsoft Visual Studio Code
+- Libraries: pymongo (for database), bson ObjectId (for working with MongoDB ObjectIds) and unittest (for unit testing).
 
