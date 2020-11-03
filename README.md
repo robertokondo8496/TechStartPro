@@ -15,10 +15,17 @@ You must have installed on your PC the following items:
 
 ### Database
 
-Start the MongoDB server.
+Install MongoDB from https://www.mongodb.com/try/download/community.
+Start the MongoDB server, typing mongod on console.
+Create a database called "techstart":
+
+```
+use techstart
+```
 
 ### Program
 
+Install python 3.9.0 from https://www.python.org/downloads/
 In the directory of the project, type on console "python3 program.py".
 First time running the program is necessary to import the data from "categorias.csv". Please choose the option in the main menu.
 
@@ -30,19 +37,19 @@ Before running those tests, please make sure that you are running the MongoDB se
 
 For testing the module that reads the csv reader, type on console:
 
-...
+```
 python3 testread.py
-...
+```
 
 ### testshow.py
 
 For testing the module that goes tho the database and searches for some data using specified filters by user, type on console:
 
-...
+```
 python3 testshow.py
-...
+```
 
-### About the working environment used
+## About the working environment used
 
 To develop this application, some resources were used:
 
